@@ -50,6 +50,22 @@
                     <translation lang="en_US"></translation>
                 </translations>
             </property>
+            <property key="dropdownRadio" type="enumeration" defaultValue="dropdownlist" required="true">
+                <caption>Visualization</caption>
+                <description/>
+                <enumerationValues>
+                    <enumerationValue key="dropdownlist">Dropdown</enumerationValue>
+                    <enumerationValue key="radiobuttonlist">Radiobuttons</enumerationValue>
+                </enumerationValues>
+            </property>
+            <property key="direction" type="enumeration" defaultValue="vertical" required="true">
+                <caption>Direction</caption>
+                <description>Only applicable for Radiobuttons</description> 
+                <enumerationValues>
+                    <enumerationValue key="horizontal">Horizontal</enumerationValue>
+                    <enumerationValue key="vertical">Vertical</enumerationValue>
+                </enumerationValues>
+            </property>
         </propertyGroup>
         <propertyGroup caption="Events">
             <property key="onChangeAction" type="action" required="false">

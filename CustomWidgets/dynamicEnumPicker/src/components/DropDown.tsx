@@ -15,7 +15,7 @@ export class DropDown extends Component<DropDownProps> {
     createDropdownOptions() {
         let options: JSX.Element[] = []
         //create empty dropdown option
-    options.push(<option value = {this.props.placeholder}>{this.props.placeholder}</option>)
+        options.push(<option value = {this.props.placeholder}>{this.props.placeholder}</option>)
         //create dropdown option for all enum values given
         this.props.enumValues.forEach((elem) => {
             options.push(<option value = {elem.enumKey}>{elem.enumValue}</option>)

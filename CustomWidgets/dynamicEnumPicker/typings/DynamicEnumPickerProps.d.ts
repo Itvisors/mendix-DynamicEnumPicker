@@ -21,6 +21,10 @@ export interface EnumValuesType {
 
 export type EditableEnum = "default" | "never";
 
+export type DropdownRadioEnum = "dropdownlist" | "radiobuttonlist";
+
+export type DirectionEnum = "horizontal" | "vertical";
+
 export interface EnumValuesPreviewType {
     enumKey: string;
     enumValue: string;
@@ -36,6 +40,8 @@ export interface DynamicEnumPickerContainerProps extends CommonProps {
     enumValues: EnumValuesType[];
     editable: EditableEnum;
     placeholder?: DynamicValue<string>;
+    dropdownRadio: DropdownRadioEnum;
+    direction: DirectionEnum;
     onChangeAction?: ActionValue;
 }
 
@@ -44,6 +50,8 @@ export interface DynamicEnumPickerPreviewProps extends CommonProps {
     enumValues: EnumValuesPreviewType[];
     editable: EditableEnum;
     placeholder?: string;
+    dropdownRadio: DropdownRadioEnum;
+    direction: DirectionEnum;
     onChangeAction?: ActionPreview;
 }
 
@@ -52,5 +60,7 @@ export interface VisibilityMap {
     enumValues: EnumValuesVisibilityType[] | boolean;
     editable: boolean;
     placeholder: boolean;
+    dropdownRadio: boolean;
+    direction: boolean;
     onChangeAction: boolean;
 }

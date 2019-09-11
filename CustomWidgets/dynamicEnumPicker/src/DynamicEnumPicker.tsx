@@ -1,5 +1,6 @@
 import { Component, ReactNode, createElement, Fragment } from "react";
 import { DropDown } from "./components/DropDown";
+import { RadioButtonList } from "./components/RadioButtonList";
 import { hot } from "react-hot-loader/root";
 import { DynamicEnumPickerContainerProps } from "../typings/DynamicEnumPickerProps";
 
@@ -21,15 +22,29 @@ class DynamicEnumPicker extends Component<DynamicEnumPickerContainerProps> {
         let placeholder = typeof this.props.placeholder === 'undefined' ? "" : this.props.placeholder.value;
         const validationFeedback = this.props.enumAttribute.validation;
         const value = this.props.enumAttribute.value || "";
-        return <Fragment><DropDown
-            enumValues = {this.createEnumList()}
-            onChange= {this.onChangeHandle}
-            disabled= {this.isReadOnly()}
-            placeholder = {placeholder}
-            value = {value}
-        />
-        <Alert id={this.props.id + "-error"}>{validationFeedback}</Alert>
-        </Fragment>; 
+        if (this.props.dropdownRadio === "dropdownlist") {
+            return <Fragment><DropDown
+                enumValues = {this.createEnumList()}
+                onChange= {this.onChangeHandle}
+                disabled= {this.isReadOnly()}
+                placeholder = {placeholder}
+                value = {value}
+            />
+            <Alert id={this.props.id + "-error"}>{validationFeedback}</Alert>
+            </Fragment>; 
+        } else {
+            return <Fragment>
+                <RadioButtonList
+                enumValues = {this.createEnumList()}
+                onChange= {this.onChangeHandle}
+                disabled= {this.isReadOnly()}
+                direction = {this.props.direction}
+                value = {value}
+                id = {this.props.id}
+            />
+            <Alert id={this.props.id + "-error"}>{validationFeedback}</Alert>
+            </Fragment>; 
+        }
     }
 
     private isReadOnly(): boolean {
