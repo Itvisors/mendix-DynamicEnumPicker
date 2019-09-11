@@ -35,7 +35,7 @@ export class RadioButtonList extends Component<RadioButtonListProps> {
     
     render(): ReactNode {
         if (this.props.direction === "horizontal") {
-            return <div className = "mx-radiogroup mx-radiobuttons inline form-group">
+            return <div className = "mx-radiogroup mx-radiobuttons inline form-group spacing-outer-left-none">
             {this.createRadioButtonList()}
             </div>;  
         } else {
