@@ -5,6 +5,7 @@ export interface DropDownProps {
     onChange: (key: string) => void;
     disabled: boolean;
     placeholder?: string;
+    value: string;
 }
 
 
@@ -32,6 +33,7 @@ export class DropDown extends Component<DropDownProps> {
             className="form-control"
             onChange={this.onChangeHandle}
             disabled={this.props.disabled}
+            value= {this.props.value}
             >
             {this.createDropdownOptions()}
         </select>; 

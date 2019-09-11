@@ -20,11 +20,13 @@ class DynamicEnumPicker extends Component<DynamicEnumPickerContainerProps> {
     render(): ReactNode {
         let placeholder = typeof this.props.placeholder === 'undefined' ? "" : this.props.placeholder.value;
         const validationFeedback = this.props.enumAttribute.validation;
+        const value = this.props.enumAttribute.value || "";
         return <Fragment><DropDown
             enumValues = {this.createEnumList()}
             onChange= {this.onChangeHandle}
             disabled= {this.isReadOnly()}
             placeholder = {placeholder}
+            value = {value}
         />
         <Alert id={this.props.id + "-error"}>{validationFeedback}</Alert>
         </Fragment>; 
