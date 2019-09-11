@@ -1,9 +1,0 @@
-Buildfile: C:\Users\JohanMunneke\Documents\GitHub\mendix-DynamicEnumPicker\mendix-DynamicEnumPicker\deployment\build_core.xml
-
-clean:
-   [delete] Deleting directory C:\Users\JohanMunneke\Documents\GitHub\mendix-DynamicEnumPicker\mendix-DynamicEnumPicker\deployment\model
-
-BUILD SUCCESSFUL
-Total time: 0 seconds
-
-

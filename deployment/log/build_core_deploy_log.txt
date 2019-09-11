@@ -1,9 +1,0 @@
-Buildfile: C:\Users\JohanMunneke\Documents\GitHub\mendix-DynamicEnumPicker\mendix-DynamicEnumPicker\deployment\build_core.xml
-
-deploy:
-     [copy] Copying 25 files to C:\Users\JohanMunneke\Documents\GitHub\mendix-DynamicEnumPicker\mendix-DynamicEnumPicker\deployment
-
-BUILD SUCCESSFUL
-Total time: 0 seconds
-
-
