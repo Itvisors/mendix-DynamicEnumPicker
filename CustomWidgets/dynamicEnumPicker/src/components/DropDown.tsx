@@ -1,4 +1,4 @@
-import { Component, ReactNode, createElement, ChangeEvent, Fragment } from "react";
+import { Component, ReactNode, createElement, ChangeEvent } from "react";
 
 export interface DropDownProps {
     enumValues: {enumValue: string, enumKey:string}[];
@@ -28,13 +28,12 @@ export class DropDown extends Component<DropDownProps> {
     
     
     render(): ReactNode {
-        return <Fragment><select 
+        return <select 
             className="form-control"
             onChange={this.onChangeHandle}
             disabled={this.props.disabled}
             >
             {this.createDropdownOptions()}
-        </select>
-    </Fragment>; 
+        </select>; 
     }
 }

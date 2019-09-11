@@ -1,9 +1,10 @@
-import { Component, ReactNode, createElement, Fragment, ChangeEvent } from "react";
+import { Component, ReactNode, createElement, Fragment } from "react";
 import { DropDown } from "./components/DropDown";
 import { hot } from "react-hot-loader/root";
 import { DynamicEnumPickerContainerProps } from "../typings/DynamicEnumPickerProps";
 
 import "./ui/DynamicEnumPicker.css";
+import { Alert } from "./components/Alert";
 
 class DynamicEnumPicker extends Component<DynamicEnumPickerContainerProps> {
     private readonly onChangeHandle = this.onChange.bind(this);
@@ -18,12 +19,15 @@ class DynamicEnumPicker extends Component<DynamicEnumPickerContainerProps> {
     
     render(): ReactNode {
         let placeholder = typeof this.props.placeholder === 'undefined' ? "" : this.props.placeholder.value;
-        return <DropDown
+        const validationFeedback = this.props.enumAttribute.validation;
+        return <Fragment><DropDown
             enumValues = {this.createEnumList()}
             onChange= {this.onChangeHandle}
             disabled= {this.isReadOnly()}
             placeholder = {placeholder}
-        />; 
+        />
+        <Alert id={this.props.id + "-error"}>{validationFeedback}</Alert>
+        </Fragment>; 
     }
 
     private isReadOnly(): boolean {
