@@ -11,12 +11,14 @@ export interface RadioButtonListProps {
 
 
 export class RadioButtonList extends Component<RadioButtonListProps> {
+    //bind onclick method
     private readonly onClickHandle = this.onClick.bind(this);
 
     createRadioButtonList() {
+        // initialize array to store the radiobuttons
         let options: JSX.Element[] = []
         let index = 0;
-        //create dropdown option for all enum values given
+        //create radiobutton for all enum values given
         this.props.enumValues.forEach((elem) => {
         options.push(
             <div className = "radio">
@@ -30,17 +32,20 @@ export class RadioButtonList extends Component<RadioButtonListProps> {
     }
 
     private onClick(event: MouseEvent): void {
+        //When item is click, call onclick method and pass the enum key
         this.props.onClick(event.target.value);
     }
     
     
     render(): ReactNode {
+        // For horizontal direction, different classes are needed 
+        // Spacing-outer-left-none is needed to align the radiobuttons correctly
         if (this.props.direction === "horizontal") {
-            return <div className = "mx-radiogroup mx-radiobuttons inline form-group spacing-outer-left-none">
+            return <div className = "mx-radiobuttons inline form-group spacing-outer-left-none">
             {this.createRadioButtonList()}
             </div>;  
         } else {
-            return <div className = "mx-radiogroup mx-radiobuttons">
+            return <div className = "mx-radiobuttons">
             {this.createRadioButtonList()}
             </div>;  
         }

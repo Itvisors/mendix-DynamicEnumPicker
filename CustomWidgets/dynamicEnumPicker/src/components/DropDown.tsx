@@ -10,9 +10,11 @@ export interface DropDownProps {
 
 
 export class DropDown extends Component<DropDownProps> {
+    //bind onchange method
     private readonly onChangeHandle = this.onChange.bind(this);
 
     createDropdownOptions() {
+        // initialize array to store the dropdown options
         let options: JSX.Element[] = []
         //create empty dropdown option
         options.push(<option value = {this.props.placeholder}>{this.props.placeholder}</option>)
@@ -24,6 +26,7 @@ export class DropDown extends Component<DropDownProps> {
     }
 
     private onChange(event: ChangeEvent<HTMLSelectElement>): void {
+        //When item is click, call onclick method and pass the enum key
         this.props.onChange(event.target.value);
     }
     
