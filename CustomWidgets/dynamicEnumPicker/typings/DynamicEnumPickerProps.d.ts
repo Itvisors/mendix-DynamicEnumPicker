@@ -39,9 +39,9 @@ export interface DynamicEnumPickerContainerProps extends CommonProps {
     enumAttribute: EditableValue<string>;
     enumValues: EnumValuesType[];
     editable: EditableEnum;
-    placeholder?: DynamicValue<string>;
     dropdownRadio: DropdownRadioEnum;
     direction: DirectionEnum;
+    placeholder?: DynamicValue<string>;
     onChangeAction?: ActionValue;
 }
 
@@ -49,9 +49,9 @@ export interface DynamicEnumPickerPreviewProps extends CommonProps {
     enumAttribute: string;
     enumValues: EnumValuesPreviewType[];
     editable: EditableEnum;
-    placeholder?: string;
     dropdownRadio: DropdownRadioEnum;
     direction: DirectionEnum;
+    placeholder?: string;
     onChangeAction?: ActionPreview;
 }
 
@@ -59,8 +59,8 @@ export interface VisibilityMap {
     enumAttribute: boolean;
     enumValues: EnumValuesVisibilityType[] | boolean;
     editable: boolean;
-    placeholder: boolean;
     dropdownRadio: boolean;
     direction: boolean;
+    placeholder: boolean;
     onChangeAction: boolean;
 }

@@ -10,7 +10,7 @@
         <propertyGroup caption="General">
             <systemProperty key="Label" />
             <property key="enumAttribute" type="attribute" onChange="onChangeAction">
-                <caption>Enumeration to display</caption>
+                <caption>Enumeration</caption>
                 <description/>
                 <attributeTypes>
                     <attributeType name="Enum"/>
@@ -43,13 +43,6 @@
                     <enumerationValue key="never">Never</enumerationValue>
                 </enumerationValues>
             </property>
-            <property key="placeholder" type="textTemplate" required="false">
-                <caption>Placeholder</caption>
-                <description/>
-                <translations>
-                    <translation lang="en_US"></translation>
-                </translations>
-            </property>
             <property key="dropdownRadio" type="enumeration" defaultValue="dropdownlist" required="true">
                 <caption>Visualization</caption>
                 <description/>
@@ -65,6 +58,13 @@
                     <enumerationValue key="horizontal">Horizontal</enumerationValue>
                     <enumerationValue key="vertical">Vertical</enumerationValue>
                 </enumerationValues>
+            </property>
+            <property key="placeholder" type="textTemplate" required="false">
+                <caption>Placeholder</caption>
+                <description>Only applicable for dropdown, placeholder for the empty value</description> 
+                <translations>
+                    <translation lang="en_US"></translation>
+                </translations>
             </property>
         </propertyGroup>
         <propertyGroup caption="Events">

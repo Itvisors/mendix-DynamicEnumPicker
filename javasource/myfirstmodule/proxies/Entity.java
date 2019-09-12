@@ -20,7 +20,7 @@ public class Entity
 	 */
 	public enum MemberNames
 	{
-		TestEnum("TestEnum"),
+		AboveBelow("AboveBelow"),
 		IntToAdd("IntToAdd"),
 		DecToAdd("DecToAdd");
 
@@ -118,21 +118,21 @@ public class Entity
 		com.mendix.core.Core.delete(context, getMendixObject());
 	}
 	/**
-	 * Set value of TestEnum
-	 * @param testenum
+	 * Set value of AboveBelow
+	 * @param abovebelow
 	 */
-	public final myfirstmodule.proxies.TestEnum getTestEnum()
+	public final myfirstmodule.proxies.TestEnum getAboveBelow()
 	{
-		return getTestEnum(getContext());
+		return getAboveBelow(getContext());
 	}
 
 	/**
 	 * @param context
-	 * @return value of TestEnum
+	 * @return value of AboveBelow
 	 */
-	public final myfirstmodule.proxies.TestEnum getTestEnum(com.mendix.systemwideinterfaces.core.IContext context)
+	public final myfirstmodule.proxies.TestEnum getAboveBelow(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		Object obj = getMendixObject().getValue(context, MemberNames.TestEnum.toString());
+		Object obj = getMendixObject().getValue(context, MemberNames.AboveBelow.toString());
 		if (obj == null)
 			return null;
 
@@ -140,25 +140,25 @@ public class Entity
 	}
 
 	/**
-	 * Set value of TestEnum
-	 * @param testenum
+	 * Set value of AboveBelow
+	 * @param abovebelow
 	 */
-	public final void setTestEnum(myfirstmodule.proxies.TestEnum testenum)
+	public final void setAboveBelow(myfirstmodule.proxies.TestEnum abovebelow)
 	{
-		setTestEnum(getContext(), testenum);
+		setAboveBelow(getContext(), abovebelow);
 	}
 
 	/**
-	 * Set value of TestEnum
+	 * Set value of AboveBelow
 	 * @param context
-	 * @param testenum
+	 * @param abovebelow
 	 */
-	public final void setTestEnum(com.mendix.systemwideinterfaces.core.IContext context, myfirstmodule.proxies.TestEnum testenum)
+	public final void setAboveBelow(com.mendix.systemwideinterfaces.core.IContext context, myfirstmodule.proxies.TestEnum abovebelow)
 	{
-		if (testenum != null)
-			getMendixObject().setValue(context, MemberNames.TestEnum.toString(), testenum.toString());
+		if (abovebelow != null)
+			getMendixObject().setValue(context, MemberNames.AboveBelow.toString(), abovebelow.toString());
 		else
-			getMendixObject().setValue(context, MemberNames.TestEnum.toString(), null);
+			getMendixObject().setValue(context, MemberNames.AboveBelow.toString(), null);
 	}
 
 	/**
