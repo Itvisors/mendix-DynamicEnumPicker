@@ -2,7 +2,7 @@ import { Component, ReactNode, createElement, ChangeEvent } from "react";
 
 export interface RadioButtonListProps {
     enumValues: {enumValue: string, enumKey:string}[];
-    onChange: (key: string) => void;
+    onClick: (key: string) => void;
     disabled: boolean;
     direction: string;
     value: string;
@@ -11,7 +11,7 @@ export interface RadioButtonListProps {
 
 
 export class RadioButtonList extends Component<RadioButtonListProps> {
-    private readonly onChangeHandle = this.onChange.bind(this);
+    private readonly onClickHandle = this.onClick.bind(this);
 
     createRadioButtonList() {
         let options: JSX.Element[] = []
@@ -20,7 +20,8 @@ export class RadioButtonList extends Component<RadioButtonListProps> {
         this.props.enumValues.forEach((elem) => {
         options.push(
             <div className = "radio">
-                <input type = "radio" id = {this.props.id + "_" + index} name = {this.props.id} value = {elem.enumKey} checked = {elem.enumKey === this.props.value}></input>
+                <input type = "radio" id = {this.props.id + "_" + index} name = {this.props.id} value = {elem.enumKey} 
+                onClick = {this.onClickHandle} checked = {elem.enumKey === this.props.value}></input>
                 <label htmlFor = {this.props.id + "_" + index}>{elem.enumValue}</label>
             </div>)
         index += 1;
@@ -28,8 +29,8 @@ export class RadioButtonList extends Component<RadioButtonListProps> {
         return options;
     }
 
-    private onChange(event: ChangeEvent<HTMLSelectElement>): void {
-        this.props.onChange(event.target.value);
+    private onClick(event: ChangeEvent<HTMLSelectElement>): void {
+        this.props.onClick(event.target.value);
     }
     
     
