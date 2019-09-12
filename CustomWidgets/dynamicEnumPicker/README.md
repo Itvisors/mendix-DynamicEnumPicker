@@ -25,6 +25,7 @@ Other default behavior of dropdowns and radiobuttons
 - Editable: Whether the user is allowed to edit the enumeration.
 - Visualization: Whether the widget should be shown as dropdown or as radiobuttonlist
 - Direction: Horizontal vs Vertical, only applicable when radiobuttons is select
+- Placeholder: caption for the empty value, only applicable when dropdown is selected
 
 ### Events
 - Event to be triggered onchange.
