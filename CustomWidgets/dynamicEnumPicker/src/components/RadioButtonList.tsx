@@ -1,4 +1,4 @@
-import { Component, ReactNode, createElement, ChangeEvent } from "react";
+import { Component, ReactNode, createElement, MouseEvent } from "react";
 
 export interface RadioButtonListProps {
     enumValues: {enumValue: string, enumKey:string}[];
@@ -21,7 +21,7 @@ export class RadioButtonList extends Component<RadioButtonListProps> {
         options.push(
             <div className = "radio">
                 <input type = "radio" id = {this.props.id + "_" + index} name = {this.props.id} value = {elem.enumKey} 
-                onClick = {this.onClickHandle} checked = {elem.enumKey === this.props.value}></input>
+                onClick = {this.onClickHandle} checked = {elem.enumKey === this.props.value} disabled = {this.props.disabled}></input>
                 <label htmlFor = {this.props.id + "_" + index}>{elem.enumValue}</label>
             </div>)
         index += 1;
@@ -29,7 +29,7 @@ export class RadioButtonList extends Component<RadioButtonListProps> {
         return options;
     }
 
-    private onClick(event: ChangeEvent<HTMLSelectElement>): void {
+    private onClick(event: MouseEvent): void {
         this.props.onClick(event.target.value);
     }
     
