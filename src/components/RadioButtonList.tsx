@@ -11,8 +11,8 @@ export interface RadioButtonListProps {
 
 
 export class RadioButtonList extends Component<RadioButtonListProps> {
-    //bind onclick method
-    private readonly onClickHandle = this.onChange.bind(this);
+    //bind onchange method
+    private readonly onChangeHandle = this.onChange.bind(this);
 
     createRadioButtonList() {
         // initialize array to store the radiobuttons
@@ -23,7 +23,7 @@ export class RadioButtonList extends Component<RadioButtonListProps> {
         options.push(
             <div className = "radio">
                 <input type = "radio" id = {this.props.id + "_" + index} name = {this.props.id} value = {elem.enumKey} 
-                onChange = {this.onClickHandle} checked = {elem.enumKey === this.props.value} disabled = {this.props.disabled}></input>
+                onChange = {this.onChangeHandle} checked = {elem.enumKey === this.props.value} disabled = {this.props.disabled}></input>
                 <label htmlFor = {this.props.id + "_" + index}>{elem.enumValue}</label>
             </div>)
         index += 1;
