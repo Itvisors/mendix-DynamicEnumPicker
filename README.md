@@ -18,7 +18,7 @@ Widget used to show an enumeration either as dropdown or as a radiobuttonlist, w
 - Label Caption: When a label has to be shown, what should be the caption
 - Enumeration: the enumeration to base the widget on
 - Values: Here the values can be added that the user can select
-  - Key: This should ne exactly the same key as the key of the enumeration value to add
+  - Key: This should be exactly the same key as the key of the enumeration value to add
   - Value to show (trabslatable) : The caption of the enumeration value to show
 - Editable: Whether the user is allowed to edit the enumeration.
 - Visualization: Whether the widget should be shown as dropdown or as radiobuttonlist
