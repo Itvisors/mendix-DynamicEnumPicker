@@ -41,7 +41,7 @@ class DynamicEnumPicker extends Component<DynamicEnumPickerContainerProps> {
             return <Fragment>
                 <RadioButtonList
                 enumValues = {this.createEnumList()}
-                onClick= {this.onChangeHandle}
+                onChange= {this.onChangeHandle}
                 disabled= {this.isReadOnly()}
                 direction = {this.props.direction}
                 value = {value}
