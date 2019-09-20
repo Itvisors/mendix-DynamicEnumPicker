@@ -33,7 +33,7 @@ export class RadioButtonList extends Component<RadioButtonListProps> {
 
     //OnChange event is triggered onClick
     private onChange(event: ChangeEvent<HTMLInputElement>): void {
-        //When item is click, call onclick method and pass the enum key
+        //When item is clicked, call onclick method and pass the enum key
         this.props.onChange(event.target.value);
     }
     

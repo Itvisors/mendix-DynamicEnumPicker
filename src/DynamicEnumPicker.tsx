@@ -57,8 +57,8 @@ class DynamicEnumPicker extends Component<DynamicEnumPickerContainerProps> {
     }
 
     private onChange(key: string): void {
-        //If a option is chosen, set the enumeration to the correct value
-        // If the key is equal to the placeholder, the value is undefined
+        //If an option is chosen, set the enumeration to the correct value
+        //If the key is equal to the placeholder, the enumAttribute is set to undefined (the empty option)
         let placeholder = typeof this.props.placeholder === 'undefined' ? "" : this.props.placeholder.value;
         if (key === placeholder) {
             this.props.enumAttribute.setValue(undefined);
