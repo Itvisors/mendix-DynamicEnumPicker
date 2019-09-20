@@ -13,7 +13,7 @@ export class DropDown extends Component<DropDownProps> {
     //bind onchange method
     private readonly onChangeHandle = this.onChange.bind(this);
 
-    createDropdownOptions() {
+    private createDropdownOptions() {
         // initialize array to store the dropdown options
         let options: JSX.Element[] = []
         //create empty dropdown option

@@ -10,7 +10,7 @@ import { Alert } from "./components/Alert";
 class DynamicEnumPicker extends Component<DynamicEnumPickerContainerProps> {
     private readonly onChangeHandle = this.onChange.bind(this);
     //Convert Enumvalues to list with keys and values
-    createEnumList() {
+    private createEnumList() {
         let options: {enumValue: string, enumKey:string}[] = [];
         this.props.enumValues.forEach((elem) => {
             // Convert (translatable)value to string

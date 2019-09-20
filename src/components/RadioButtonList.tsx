@@ -14,7 +14,7 @@ export class RadioButtonList extends Component<RadioButtonListProps> {
     //bind onchange method
     private readonly onChangeHandle = this.onChange.bind(this);
 
-    createRadioButtonList() {
+    private createRadioButtonList() {
         // initialize array to store the radiobuttons
         let options: JSX.Element[] = []
         let index = 0;
