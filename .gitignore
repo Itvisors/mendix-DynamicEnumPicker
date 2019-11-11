@@ -16,3 +16,8 @@ Test/theme/.sass-cache/
 node_modules/
 .editorconfig
 .vscode/
+Test/GPUCache/data_0
+Test/GPUCache/data_1
+Test/GPUCache/data_2
+Test/GPUCache/data_3
+Test/GPUCache/index
