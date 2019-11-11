@@ -30,7 +30,7 @@ class DynamicEnumPicker extends Component<DynamicEnumPickerContainerProps> {
             return <Fragment><DropDown
                 enumValues = {this.createEnumList()}
                 onChange= {this.onChangeHandle}
-                disabled= {this.isReadOnly()}
+                disabled= {this.props.enumAttribute.readOnly}
                 placeholder = {placeholder}
                 value = {value}
             />
@@ -42,7 +42,7 @@ class DynamicEnumPicker extends Component<DynamicEnumPickerContainerProps> {
                 <RadioButtonList
                 enumValues = {this.createEnumList()}
                 onChange= {this.onChangeHandle}
-                disabled= {this.isReadOnly()}
+                disabled= {this.props.enumAttribute.readOnly}
                 direction = {this.props.direction}
                 value = {value}
                 id = {this.props.id}
@@ -50,10 +50,6 @@ class DynamicEnumPicker extends Component<DynamicEnumPickerContainerProps> {
             <Alert id={this.props.id + "-error"}>{validationFeedback}</Alert>
             </Fragment>; 
         }
-    }
-
-    private isReadOnly(): boolean {
-        return this.props.editable === "never" || this.props.enumAttribute.readOnly;
     }
 
     private onChange(key: string): void {

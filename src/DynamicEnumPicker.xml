@@ -9,6 +9,8 @@
     <properties>
         <propertyGroup caption="General">
             <systemProperty key="Label" />
+            <systemProperty key="Visibility"/>
+            <systemProperty key="Editability"/>
             <property key="enumAttribute" type="attribute" onChange="onChangeAction">
                 <caption>Enumeration</caption>
                 <description/>
@@ -34,14 +36,6 @@
                         </property>
                     </propertyGroup>
                 </properties>
-            </property>
-            <property key="editable" type="enumeration" defaultValue="default">
-                <caption>Editable</caption>
-                <description/>
-                <enumerationValues>
-                    <enumerationValue key="default">Default</enumerationValue>
-                    <enumerationValue key="never">Never</enumerationValue>
-                </enumerationValues>
             </property>
             <property key="dropdownRadio" type="enumeration" defaultValue="dropdownlist" required="true">
                 <caption>Visualization</caption>
