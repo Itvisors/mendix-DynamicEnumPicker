@@ -1,7 +1,6 @@
 import { Component, ReactNode, createElement, Fragment } from "react";
 import { DropDown } from "./components/DropDown";
 import { RadioButtonList } from "./components/RadioButtonList";
-import { hot } from "react-hot-loader/root";
 import { DynamicEnumPickerContainerProps } from "../typings/DynamicEnumPickerProps";
 
 import "./ui/DynamicEnumPicker.css";
@@ -64,4 +63,4 @@ class DynamicEnumPicker extends Component<DynamicEnumPickerContainerProps> {
     }
 }
 
-export default hot(DynamicEnumPicker);
+export default DynamicEnumPicker;
