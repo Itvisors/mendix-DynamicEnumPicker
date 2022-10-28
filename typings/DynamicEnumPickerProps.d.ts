@@ -3,8 +3,7 @@
  * WARNING: All changes made to this file will be overwritten
  * @author Mendix UI Content Team
  */
-import { CSSProperties } from "react";
-import { ActionValue, DynamicValue, EditableValue } from "mendix";
+import { DynamicValue, EditableValue } from "mendix";
 
 export interface EnumValuesType {
     enumKey: string;
@@ -22,8 +21,6 @@ export interface EnumValuesPreviewType {
 
 export interface DynamicEnumPickerContainerProps {
     name: string;
-    class: string;
-    style?: CSSProperties;
     tabIndex?: number;
     id: string;
     enumAttribute: EditableValue<string>;
@@ -31,12 +28,10 @@ export interface DynamicEnumPickerContainerProps {
     dropdownRadio: DropdownRadioEnum;
     direction: DirectionEnum;
     placeholder?: DynamicValue<string>;
-    onChangeAction?: ActionValue;
 }
 
 export interface DynamicEnumPickerPreviewProps {
-    class: string;
-    style: string;
+    readOnly: boolean;
     enumAttribute: string;
     enumValues: EnumValuesPreviewType[];
     dropdownRadio: DropdownRadioEnum;

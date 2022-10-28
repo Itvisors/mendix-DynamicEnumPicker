@@ -3,17 +3,20 @@
   "widgetName": "DynamicEnumPicker",
   "version": "1.0.0",
   "description": "Choose which enumeration values to show as dropdown or radiobutton list and change captions as needed",
-  "copyright": "ITvisors (2019)",
+  "copyright": "Aiden (2022)",
   "author": "Johan Munneke",
+  "engines": {
+    "node": ">=16"
+  },
+  "license": "Apache-2.0",
   "config": {
-    "widgetPath": "./Test/widgets",
     "projectPath": "./Test/",
     "mendixHost": "http://localhost:8080",
-    "developmentPort": "3000"
+    "developmentPort": 3000
   },
   "packagePath": "itvisors",
   "scripts": {
-    "start": "pluggable-widgets-tools start:server --open",
+    "start": "pluggable-widgets-tools start:server",
     "dev": "pluggable-widgets-tools start:web",
     "build": "pluggable-widgets-tools build:web",
     "lint": "pluggable-widgets-tools lint",
@@ -21,15 +24,14 @@
     "prerelease": "npm run lint",
     "release": "pluggable-widgets-tools release:web"
   },
-  "license": "Apache-2.0",
   "devDependencies": {
-    "@mendix/pluggable-widgets-tools": "^8.18.1",
-    "@types/big.js": "^4.0.5",
-    "@types/classnames": "^2.2.4",
-    "@types/react": "~16.9.0",
-    "@types/react-dom": "~16.9.0"
+    "@mendix/pluggable-widgets-tools": "^9.0.0",
+    "@types/big.js": "^6.0.2",
+    "@types/react": "~17.0.1",
+    "@types/react-dom": "~17.0.1"
   },
   "dependencies": {
     "classnames": "^2.2.6"
   }
 }
+
