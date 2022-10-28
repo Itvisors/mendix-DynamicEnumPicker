@@ -1,4 +1,4 @@
-import { Component, ReactNode, createElement, ChangeEvent } from "react";
+import { createElement, ChangeEvent } from "react";
 
 export interface DropDownProps {
     enumValues: {enumValue: string, enumKey:string}[];
@@ -9,36 +9,31 @@ export interface DropDownProps {
 }
 
 
-export class DropDown extends Component<DropDownProps> {
-    //bind onchange method
-    private readonly onChangeHandle = this.onChange.bind(this);
-
-    private createDropdownOptions() {
+export function DropDown (props: DropDownProps) {
+    const createDropdownOptions = () => {
         // initialize array to store the dropdown options
-        let options: JSX.Element[] = []
+        let options: JSX.Element[] = [];
         //create empty dropdown option
-        options.push(<option value = {this.props.placeholder}>{this.props.placeholder}</option>)
+        options.push(<option value = {props.placeholder}>{props.placeholder}</option>)
         //create dropdown option for all enum values given
-        this.props.enumValues.forEach((elem) => {
+        props.enumValues.forEach((elem) => {
             options.push(<option value = {elem.enumKey}>{elem.enumValue}</option>)
         });
         return options;
     }
 
-    private onChange(event: ChangeEvent<HTMLSelectElement>): void {
+    const onChange = (event: ChangeEvent<HTMLSelectElement>): void => {
         //When item is click, call onclick method and pass the enum key
-        this.props.onChange(event.target.value);
+        props.onChange(event.target.value);
     }
     
     
-    render(): ReactNode {
-        return <select 
-            className="form-control"
-            onChange={this.onChangeHandle}
-            disabled={this.props.disabled}
-            value= {this.props.value}
-            >
-            {this.createDropdownOptions()}
-        </select>; 
-    }
+    return <select 
+        className="form-control"
+        onChange={onChange}
+        disabled={props.disabled}
+        value= {props.value}
+        >
+        {createDropdownOptions()}
+    </select>; 
 }
