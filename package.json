@@ -1,9 +1,9 @@
 {
   "name": "dynamicenumpicker",
   "widgetName": "DynamicEnumPicker",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Choose which enumeration values to show as dropdown or radiobutton list and change captions as needed",
-  "copyright": "Aiden (2022)",
+  "copyright": "Aiden (2024)",
   "author": "Johan Munneke",
   "engines": {
     "node": ">=16"
@@ -25,13 +25,19 @@
     "release": "pluggable-widgets-tools release:web"
   },
   "devDependencies": {
-    "@mendix/pluggable-widgets-tools": "~9.18.0",
-    "@types/big.js": "^6.0.2",
-    "@types/react": "~17.0.1",
-    "@types/react-dom": "~17.0.1"
+    "@mendix/pluggable-widgets-tools": "^10.7.1",
+    "@types/big.js": "^6.0.2"
   },
   "dependencies": {
     "classnames": "^2.2.6"
+  },
+  "resolutions": {
+    "react": "18.2.0",
+    "react-native": "0.72.7"
+  },
+  "overrides": {
+    "react": "18.2.0",
+    "react-native": "0.72.7"
   }
 }
 
