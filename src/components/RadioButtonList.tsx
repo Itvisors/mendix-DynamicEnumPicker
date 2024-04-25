@@ -1,7 +1,7 @@
 import { createElement, ChangeEvent } from "react";
 
 export interface RadioButtonListProps {
-    enumValues: { enumValue: string; enumKey: string }[];
+    enumValues: Array<{ enumValue: string; enumKey: string }>;
     onChange: (key: string) => void;
     disabled: boolean;
     direction: string;
@@ -12,7 +12,7 @@ export interface RadioButtonListProps {
 export function RadioButtonList(props: RadioButtonListProps) {
     const createRadioButtonList = () => {
         // initialize array to store the radiobuttons
-        let options: JSX.Element[] = [];
+        const options: JSX.Element[] = [];
         let index = 0;
         // create radiobutton for all enum values given
         props.enumValues.forEach(elem => {
@@ -37,7 +37,7 @@ export function RadioButtonList(props: RadioButtonListProps) {
 
     // OnChange event is triggered onClick
     const onChange = (event: ChangeEvent<HTMLInputElement>): void => {
-        //When item is clicked, call onclick method and pass the enum key
+        // When item is clicked, call onclick method and pass the enum key
         props.onChange(event.target.value);
     };
 
